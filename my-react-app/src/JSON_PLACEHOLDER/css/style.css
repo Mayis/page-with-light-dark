@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #28096b;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: 0.5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  background: var(--background);
+  transition: 0.5s;
+}
+
+input:checked + .slider {
+  background-color: #522ba7;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+#header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+#header .backDiv {
+  cursor: pointer;
+}
+#header .backDiv .backIcon {
+  font-size: 25px;
+  transition: 0.4s;
+}
+#header .backDiv .dark {
+  color: white;
+}
+
+.lightHead {
+  transition: 0.4s;
+  background-color: #9f7aee;
+}
+
+.nightHead {
+  transition: 0.4s;
+  background-color: #331d64;
+}
+
+.lightMain {
+  transition: 0.4s;
+  background-color: #ece6f8;
+}
+
+.nightMain {
+  transition: 0.4s;
+  background-color: #513985;
+}
+
+#mainUsers {
+  margin-top: 60px;
+  padding: 10px;
+  width: 100%;
+}
+#mainUsers .oneUser {
+  padding: 10px;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  position: relative;
+  transition: 0.4s;
+}
+#mainUsers .oneUser:hover {
+  transition: 0.4s;
+  background-color: #b8a0eb;
+}
+#mainUsers .oneUser .info {
+  position: absolute;
+  left: 150px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#mainUsers .oneUser .info .name {
+  font-family: "Aboreto", cursive;
+  transition: 0.4s;
+}
+#mainUsers .oneUser .info .email {
+  font-family: "Montserrat", sans-serif;
+  transition: 0.4s;
+}
+#mainUsers .oneUser .info .night {
+  transition: 0.4s;
+  color: white;
+}
+#mainUsers .oneUser .icons {
+  position: absolute;
+  right: 150px;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+#mainUsers .oneUser .icons .every-icon {
+  font-size: 25px;
+  transition: 0.4s;
+}
+#mainUsers .oneUser .icons .night {
+  transition: 0.4s;
+  color: white;
+}
+
+.darkPost {
+  transition: 0.4s;
+  background-color: #513985;
+}
+
+#mainPost {
+  margin-top: 60px;
+  padding: 10px;
+  transition: 0.4s;
+}
+#mainPost .onePost {
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-bottom: 20px;
+}
+#mainPost .onePost:hover {
+  transition: 0.4s;
+  background-color: #9176cc;
+}
+#mainPost .onePost .postTitle {
+  text-align: center;
+  font-family: "Aboreto", cursive;
+  transition: 0.4s;
+}
+#mainPost .onePost .dark {
+  color: white;
+  transition: 0.4s;
+}
+#mainPost .onePost .postBody {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  transition: 0.4s;
+}
+
+#backgroundCom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+#backgroundCom #comments .oneComment {
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#backgroundCom #comments .oneComment .commentName {
+  font-family: "Aboreto", cursive;
+  transition: 0.4s;
+}
+#backgroundCom #comments .oneComment .commentBody {
+  font-family: "Montserrat", sans-serif;
+  transition: 0.4s;
+}
+#backgroundCom #comments .oneComment .darkCom {
+  color: white;
+  transition: 0.4s;
+}
+
+.albums {
+  margin-top: 60px;
+  padding: 20px;
+  transition: 0.4s;
+  text-align: center;
+}
+.albums .oneAlbum {
+  padding: 20px 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.albums .oneAlbum:hover {
+  transition: 0.4s;
+  background-color: #9f7aee;
+}
+.albums .oneAlbum .albumId {
+  font-family: "Aboreto", cursive;
+  transition: 0.4s;
+}
+.albums .oneAlbum .darkId {
+  transition: 0.4s;
+  color: white;
+}
+.albums .oneAlbum .albumTitle {
+  font-family: "Aboreto", cursive;
+  transition: 0.4s;
+}
+.albums .oneAlbum .darkTitle {
+  transition: 0.4s;
+  color: white;
+}
+
+.darkAlbum {
+  transition: 0.4s;
+  background-color: #513985;
+}
+
+#swiperPhoto {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#swiperPhoto .swiperDiv .photoH4 {
+  font-family: "Aboreto", cursive;
+  transition: 0.4s;
+}
+#swiperPhoto .swiperDiv .dark {
+  transition: 0.4s;
+  color: white;
+}
+#swiperPhoto .swiperDiv .photoImg {
+  width: 400px;
+  height: 400px;
+  margin-top: 15px;
+}/*# sourceMappingURL=style.css.map */
